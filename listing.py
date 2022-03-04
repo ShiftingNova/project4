@@ -43,16 +43,15 @@ def flatten(lists):
             results.append(endex)
     return results
 def is_median(number, target):
-    below  = 0
-    above = 0
-    for index in number:
-        if index < target:
-            below = below +1
-        elif index > target:
-            above +=1
-    if below == above:
-        return True
+    index = 0
+    half = (len(number)-1)/2
+    while index <len(number):
+        if number[index]==target:
+            if number[index] == (half+1):
+                return True
+        index = index +1
     return False
+
 def differences(numbers):
     results = []
     index = 0
