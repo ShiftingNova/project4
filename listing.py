@@ -27,7 +27,7 @@ def del_duplicate_adjacents(numbers):
             del numbers[index]
             index = index -1
         index = index - 1
-    return numbers
+    #return numbers
 def sum_sublists(lists):
     results=[]
     for index in lists:
@@ -46,8 +46,8 @@ def is_median(number, target):
     index = 0
     half = (len(number)-1)/2
     while index <len(number):
-        if number[index]==target:
-            if number[index] == (half+1):
+        if index == (half+1):
+            if number[index]==target:
                 return True
         index = index +1
     return False
@@ -83,3 +83,4 @@ def comma_separated(numbers):
     results=""
     results= str(numbers)
     return results
+
